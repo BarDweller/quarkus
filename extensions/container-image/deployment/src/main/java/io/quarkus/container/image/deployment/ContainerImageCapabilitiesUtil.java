@@ -13,6 +13,7 @@ public final class ContainerImageCapabilitiesUtil {
 
     public final static Map<String, String> CAPABILITY_TO_EXTENSION_NAME = new HashMap<>();
     static {
+        CAPABILITY_TO_EXTENSION_NAME.put(Capability.CONTAINER_IMAGE_BUILDPACK.getName(), "quarkus-container-image-buildpack");
         CAPABILITY_TO_EXTENSION_NAME.put(Capability.CONTAINER_IMAGE_JIB.getName(), "quarkus-container-image-jib");
         CAPABILITY_TO_EXTENSION_NAME.put(Capability.CONTAINER_IMAGE_DOCKER.getName(), "quarkus-container-image-docker");
         CAPABILITY_TO_EXTENSION_NAME.put(Capability.CONTAINER_IMAGE_S2I.getName(), "quarkus-container-image-s2i");

@@ -48,6 +48,7 @@ public enum Capability {
      * @see io.quarkus.deployment.metrics.MetricsCapabilityBuildItem
      */
     METRICS,
+    CONTAINER_IMAGE_BUILDPACK,
     CONTAINER_IMAGE_JIB,
     CONTAINER_IMAGE_DOCKER,
     CONTAINER_IMAGE_S2I,

@@ -208,6 +208,7 @@
         <log4j2-jboss-logmanager.version>1.0.0.Beta1</log4j2-jboss-logmanager.version>
         <log4j-jboss-logmanager.version>1.2.0.Final</log4j-jboss-logmanager.version>
         <avro.version>1.10.0</avro.version>
+        <java-buildpack-client.version>main-SNAPSHOT</java-buildpack-client.version>
     </properties>
 
     <dependencyManagement>
@@ -1887,6 +1888,16 @@
                 <artifactId>quarkus-azure-functions-http-deployment</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-container-image-buildpack</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-container-image-buildpack-deployment</artifactId>
+                <version>${project.version}</version>
+            </dependency>            
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-container-image-docker</artifactId>
@@ -4746,6 +4757,13 @@
                 <artifactId>qute-generator</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <!-- Buildpacks Container Extension -->
+            <dependency>
+                <groupId>com.github.snowdrop</groupId>
+                <artifactId>java-buildpack-client</artifactId>
+                <version>${java-buildpack-client.version}</version>
+            </dependency>   
 
             <!-- Jib -->
             <dependency>
