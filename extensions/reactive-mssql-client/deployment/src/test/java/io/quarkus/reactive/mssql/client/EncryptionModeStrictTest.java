@@ -25,7 +25,6 @@ public class EncryptionModeStrictTest {
             // We'll know for sure that encryption mode setting takes precedence
             .overrideConfigKey("quarkus.datasource.reactive.mssql.ssl", "false")
             .overrideConfigKey("quarkus.datasource.reactive.trust-certificate-pem", "true")
-            .overrideConfigKey("quarkus.datasource.reactive.hostname-verification-algorithm", "NONE")
             .overrideConfigKey("quarkus.datasource.reactive.trust-certificate-pem.certs",
                     "target/certificates/mssql-server-ca.crt")
             .withApplicationRoot((jar) -> jar.addClasses(BeanUsingPool.class));
