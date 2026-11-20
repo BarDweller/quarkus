@@ -23,6 +23,7 @@ public class EncryptionModeOnTest {
             .withConfigurationResource("application-default-datasource.properties")
             .overrideConfigKey("quarkus.datasource.reactive.mssql.encryption-mode", "on")
             .overrideConfigKey("quarkus.datasource.reactive.trust-certificate-pem", "true")
+            .overrideConfigKey("quarkus.datasource.reactive.hostname-verification-algorithm", "NONE")
             .overrideConfigKey("quarkus.datasource.reactive.trust-certificate-pem.certs",
                     "target/certificates/mssql-server-ca.crt")
             .withApplicationRoot((jar) -> jar.addClasses(BeanUsingPool.class));
